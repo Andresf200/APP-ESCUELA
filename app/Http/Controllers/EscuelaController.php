@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Escuela;
+use App\Http\Resources\EscuelaResource;
 
 class EscuelaController extends Controller
 {
@@ -12,6 +13,6 @@ class EscuelaController extends Controller
         ->allowedIncludes(['alumnos'])
         ->jsonPaginate();
 
-        return $escuelas;
+        return EscuelaResource::collection($escuelas);
     }
 }
