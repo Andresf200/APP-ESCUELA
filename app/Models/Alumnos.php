@@ -12,7 +12,6 @@ class Alumnos extends Model
     protected $fillable = [
             'nombre',
             'apellidos',
-            'ciudad',
             'fecha_nacimiento',
             'ciudad_natal',
             'escuela_id'

@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\JsonApi\Traits\JsonApiResource;
+use App\Http\Resources\AlumnoResource;
 
 
 class EscuelaResource extends JsonResource
@@ -27,7 +28,7 @@ class EscuelaResource extends JsonResource
     public function getIncludes():array
     {
         return [
-//            'alumnos' => AlumnosResource::collection($this->whenLoaded('alumnos'))
+            'alumnos' => AlumnoResource::make($this->whenLoaded('alumnos'))
         ];
     }
 }

@@ -16,7 +16,6 @@ class AlumnosFactory extends Factory
         return [
             'nombre' => fake()->name(),
             'apellidos' => fake()->lastName(),
-            'ciudad' => fake()->city(),
             'fecha_nacimiento' => fake()->date('Y-m-d'),
             'ciudad_natal' => fake()->city(),
             'escuela_id'  => Escuela::factory()

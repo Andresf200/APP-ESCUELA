@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('apellidos');
-            $table->string('ciudad');
             $table->date('fecha_nacimiento');
             $table->string('ciudad_natal');
             $table->unsignedBigInteger('escuela_id');
