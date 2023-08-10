@@ -15,4 +15,17 @@ class EscuelaController extends Controller
 
         return EscuelaResource::collection($escuelas);
     }
+
+    public function show($id){
+        $escula = Escuela::where('id', $id)
+        ->allowedIncludes(['alumnos'])
+        ->firstOrFail();
+
+        return EscuelaResource::make($escula);
+    }
+
+    public function destroy(Escuela $escuela){
+        $escuela->delete();
+        return response()->json(["status" => 200, "message" => "Escuela eliminada con exito"]);
+    }
 }
