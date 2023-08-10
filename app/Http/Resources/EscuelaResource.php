@@ -13,6 +13,7 @@ class EscuelaResource extends JsonResource
     public function toJsonApi(): array
     {
         return [
+            'id' => $this->resource->id,
             'nombre' => $this->resource->nombre,
             'direccion' => $this->resource->direccion,
             'path_logotipo' => $this->resource->path_logotipo,

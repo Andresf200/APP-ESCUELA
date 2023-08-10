@@ -20,6 +20,8 @@ class Escuela extends Model
         'pagina_web'
     ];
 
+    protected $table = "escuelas";
+
     public function alumnos(){
         return $this->hasMany(Alumnos::class,'escuela_id','id');
     }
